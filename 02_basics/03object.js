@@ -19,7 +19,7 @@ const regUser = {
     }
 }
 
-console.log(regUser.userfullname.userlastname.firstname)
+// console.log(regUser.userfullname.userlastname.firstname)
 
 // combining objects
 const obj1={ 1:"a",2:"b"}
@@ -30,11 +30,25 @@ const obj3=Object.assign(obj1,obj2)
 
 const obj4={...obj1,...obj2}
 
-console.log(obj3)
-console.log(obj4)
+// console.log(obj3)
+// console.log(obj4)
 
-console.log(Object.keys(obj3))  //  this gives the keys present in object
+// console.log(Object.keys(obj3))  //  this gives the keys present in object
 
 // simillarly we can also check "values" in object
 // we cam also check ""entries"" in object --> combination of keys and values in array form
   
+// Object destructuring
+
+const course={
+    coursename:" js in hindi",
+    price:"100",
+    courseInstructor:"DonUmesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course  // extracting values
+// now no need to use course.courseInstructor instead you can only use instructor
+
+console.log(instructor) 

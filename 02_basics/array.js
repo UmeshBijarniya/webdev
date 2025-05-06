@@ -17,12 +17,12 @@ const myarr1 = new Array(7,6,5,4)
 // Slice and Splice
 
 // console.log("A",myarr)
-// const myn1 = myarr.slice(1,3)
+// const myn1 = myarr.slice(1,3)  //does not make changes in original array
 // console.log("B",myn1)
 
 // console.log(myarr)
 
-// const myn2 = myarr.splice(1,3)
+// const myn2 = myarr.splice(1,3)  .. remove elements from original array and can also add new elements from original array
 // console.log("C",myn2)
 // console.log(myarr)
 
