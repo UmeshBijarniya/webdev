@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project|Practise</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="timer-box"style="text-align: center; padding: 20px; background-color: #333; border-radius: 10px;width: 500; margin-top: 100px;">
+        <h1 id ="he1">Practising javascript</h1>
+       <button id ="stop">stop</button>
+       <button id="start">start</button>
+    </div>
+    
+</body>
+<script>
+    
+    let intervalId
+    const sayDate = function(str){
+        console.log(str,Date.now())
+    }
+    
+    
+    document.querySelector('#start').
+    addEventListener('click',function(){
+        intervalId = setInterval(sayDate,1000,"hii")
+    })
+
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearInterval(intervalId)
+        console.log("STOPPED")
+    })
+
+     
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project|Practise</title>
+</head>
+
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="timer-box"
+        style="text-align: center; padding: 20px; background-color: #333; border-radius: 10px;width: 500; margin-top: 100px;">
+        <h1 id="he1">Practising javascript</h1>
+        <p class="paragraph">Click on start to activate infinite colour changing</p>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+
+    </div>
+
+</body>
+<script>
+    //generate a random colour
+    let intervalId
+    const randomcolor = function () {
+        const hex = '0123456789ABCDEF'
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+
+
+    const startChangingColor = function () {
+        // If an interval is already running, do not start a new one
+        if (!intervalId) {
+            intervalId = setInterval(change, 1000);
+        }
+
+        function change() {
+            document.querySelector('.timer-box').style.backgroundColor = randomcolor()
+        }
+    }
+
+    const stopChangingColor = function () {
+        document.querySelector('.timer-box').style.backgroundColor = '#333'; // Reset to original color
+        clearInterval(intervalId)
+        intervalId = null; // Clear the interval ID
+    }
+    document.querySelector('#start').
+        addEventListener('click', startChangingColor);
+
+    document.querySelector('#stop').
+        addEventListener('click', stopChangingColor);
+
+
+</script>
+
+</html>
